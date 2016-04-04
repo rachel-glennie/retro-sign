@@ -1,4 +1,4 @@
-# Retro sign
+s# Retro sign
 
 - Approx. completion time: **1 hour**
 - Deliverables: **1 HTML file, 1 CSS file, 1 JS file**

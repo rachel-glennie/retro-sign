@@ -1,5 +1,5 @@
-var $body = $('body');
+var $svg = $('svg');
 
-$btn.on('click', function () {
-  $('.lines').toggleClass('is-clicked');
+$('.btn').on('click', function () {
+  $svg.toggleClass('is-engaged');
 });

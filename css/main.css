@@ -31,27 +31,59 @@ svg {
   cursor: pointer;
 }
 
-.btn path:nth-child(2) {
-  transition: 200ms linear;
+.btn:active {
+  transform: scale(.9);
+  transform-origin: 350px 210px;
 }
 
-.btn path:nth-child(2):hover {
+.btn path:nth-child(2) {
+  transition: all .25s ease;
+}
+
+.btn:hover path:nth-child(2) {
   fill: #f60;
-  transition: 200ms linear;
+}
+
+.is-engaged .btn path:nth-child(2) {
+  fill: #f60;
 }
 
 .lines path {
   stroke-dasharray: 0, 480;
-  stroke-dashoffset: 20000;
 }
 
-.is-clicked {
-  animate: dash 5s linear;
+.is-engaged .lines path {
+  animation: draw .5s linear forwards;
 }
 
+.engage path {
+  transition: all .25s linear .5s;
+}
 
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
+.enage path:nth-child(2),
+.enage path:nth-child(5) {
+  transition-delay: .55s;
+}
+
+.enage path:nth-child(3) {
+  transition-delay: .63s;
+}
+
+.enage path:nth-child(4) {
+  transition-delay: .65s;
+}
+
+.is-engaged .engage path {
+  fill: #f60;
+}
+
+@keyframes draw {
+
+  0% {
+    stroke-dasharray: 0, 480;
+  }
+
+  100% {
+    stroke-dasharray: 480, 480;
   }
 }
